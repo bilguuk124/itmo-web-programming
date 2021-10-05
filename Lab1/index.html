@@ -3,9 +3,10 @@
 
 <head>
   <meta charset="utf-8">
-  <title></title>
+  <title>Лабораторная работа №1</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="js/main.js"></script>
 
   <link rel="stylesheet" href="css/main.css">
 </head>
@@ -13,15 +14,109 @@
 <body>
 
   <div class="container">
-      <div id="header">
-        <h2>Шапка сайта </h2>
-        <h3>Пурэвсурэн Билгуун, P3213, Вариант 1207</h3>
-        <img src="" alt="">
+    <!--  Header   -->
+    <div class="header">
+      <h2>Шапка сайта </h2>
+      <h3>Пурэвсурэн Билгуун, P3213, Вариант 1207</h3>
+    </div>
+
+    <div class="main">
+      <!--  Graph -->
+      <div class="content-plate" id="graph-plate">
+        <div class="plate-top">
+          <h2 class="plate-top-title">Graph</h2>
+        </div>
+        <div class="image-container">
+          <img class="mission-image" src="img/Mission.png" alt="Изображение задании">
+        </div>
       </div>
+
+      <!--Table-->
+      <div class="content-plate" id="table-plate">
+        <div class="plate-top">
+          <h2 class="plate-top-title">Table</h2>
+        </div>
+        <div class="scroll-container">
+          <table id = "result-table">
+            <tr class="table-header">
+              <th class="coords-col">X</th>
+              <th class="coords-col">Y</th>
+              <th class="coords-col">R</th>
+              <th class="time-col">Current time</th>
+              <th class="time-col">Execution time</th>
+              <th class="hitres-col">Hit result</th>
+            </tr>
+          </table>
+        </div>
+
+      </div>
+
+      <div class="content-plate" id="values-late">
+        <div class="plate-top">
+          <h2 class="plate-top-title">Values</h2>
+        </div>
+
+        <form action="" id="input-form" method="post">
+          <!--  X Value   -->
+          <div class="value-chooser">
+            <h4>Choose value of X: </h4>
+            <label class="x-label" for="x-value"> X: </label>
+            <input class="x-textinput" type="text" id="x-value" name="Value" autocomplete="off" maxlength="10"
+              placeholder="Number from -5 to 5">
+          </div>
+
+          <!--  Y Value -->
+
+          <div class="value-chooser">
+            <h4>Choose value of Y: </h4>
+            <input class="y-checkbox" type="checkbox" name="yval" id="y-checkbox0" value="-5">
+            <label class="ybox-label" for="y-checkbox0"> -5 </label> <br>
+            <input class="y-checkbox" type="checkbox" name="yval" id="y-checkbox1" value="-4">
+            <label class="ybox-label" for="y-checkbox1"> -4 </label> <br>
+            <input class="y-checkbox" type="checkbox" name="yval" id="y-checkbox2" value="-3">
+            <label class="ybox-label" for="y-checkbox2"> -3 </label> <br>
+            <input class="y-checkbox" type="checkbox" name="yval" id="y-checkbox3" value="-2">
+            <label class="ybox-label" for="y-checkbox3"> -2 </label> <br>
+            <input class="y-checkbox" type="checkbox" name="yval" id="y-checkbox4" value="-1">
+            <label class="ybox-label" for="y-checkbox4"> -1 </label> <br>
+            <input class="y-checkbox" type="checkbox" name="yval" id="y-checkbox5" value="0">
+            <label class="ybox-label" for="y-checkbox5"> 0 </label> <br>
+            <input class="y-checkbox" type="checkbox" name="yval" id="y-checkbox6" value="1">
+            <label class="ybox-label" for="y-checkbox6"> 1 </label> <br>
+            <input class="y-checkbox" type="checkbox" name="yval" id="y-checkbox7" value="2">
+            <label class="ybox-label" for="y-checkbox7"> 2 </label> <br>
+            <input class="y-checkbox" type="checkbox" name="yval" id="y-checkbox8" value="3">
+            <label class="ybox-label" for="y-checkbox8">3 </label> <br>
+          </div>
+
+          <!--  R Value   -->
+
+          <div class="value-chooser">
+            <h4>Choose your value of R</h4>
+            <input class="r-checkbox" type="checkbox" name="rval" id="r-checkbox1" value="1">
+            <label class="rbox-label" for="r-checkbox1"> 1 </label> <br>
+            <input class="r-checkbox" type="checkbox" name="rval" id="r-checkbox2" value="2">
+            <label class="rbox-label" for="r-checkbox2"> 2 </label> <br>
+            <input class="r-checkbox" type="checkbox" name="rval" id="r-checkbox3" value="3">
+            <label class="rbox-label" for="r-checkbox3"> 3 </label> <br>
+            <input class="r-checkbox" type="checkbox" name="rval" id="r-checkbox4" value="4">
+            <label class="rbox-label" for="r-checkbox4"> 4 </label> <br>
+            <input class="r-checkbox" type="checkbox" name="rval" id="r-checkbox5" value="5">
+            <label class="rbox-label" for="r-checkbox5"> 5 </label> <br>
+          </div>
+
+          <div class="buttons">
+            <input class="button" type="submit" value="Submit">
+            <input class="button" type="reset" Value="Reset">
+          </div>
+
+
+
+        </form>
+      </div>
+    </div>
   </div>
-  <div class="mission-image">
-    <img src="" alt="">
-  </div>
+
 
 </body>
 

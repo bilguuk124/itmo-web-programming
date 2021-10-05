@@ -1,16 +1,152 @@
-#header {
-  padding: 1%;
-  background-color: #575757;
-  color: #ECECEC;
+body{
+  font-size: 16px;
+  color: white;
+  background-color: #121212;
   font-family: sans-serif;
 }
 
-body{
-  background-color: #171717;
-}
 
 .container{
+  width:95%;
   padding-top: 0%;
   margin-top: 0%;
   position: relative;
+}
+
+.header {
+  padding: 1em 30px;
+  font-size: 20px;
+  background-color: #181818;
+  color: #FFFFFF;
+}
+
+input:invalid{
+  border: 2px solid red;
+}
+.mission-image{
+  border:2px solid #EEEEEE;
+  border-radius: 20px;
+  width: 30%;
+}
+.main{
+  margin-top: 3em;
+}
+
+.value-chooser{
+  margin: 2%;
+  padding:2%;
+  font-size: 100%;
+  background-color: #404040;
+  border: 2px solid #eeeeee;
+  border-radius: 1em;
+  float: left;
+}
+
+.text-error{
+  background-color: tomato;
+  border: 1px solid red;
+  
+}
+
+.box-error{
+  color: #ff0000;
+}
+
+.x-textinput{
+  width: 75%;
+  height: 20px;
+  margin: 2% 0;
+}
+
+.buttons{
+  margin-top: 3%;
+}
+
+.button{
+  height: 2rem;
+  width: 8rem;
+  font-family:  Helvetica, Arial, sans-serif;
+  background-color: #41c9ff;
+  color: black;
+}
+.button:hover{
+  background-color: #2623ff;
+}
+.content-plate{
+  padding: 0 0 20px;
+  vertical-align: top;
+  background-color: #282828;
+}
+
+.plate-top {
+  display: inline-block;
+  width: 100%;
+  margin: 0;
+  margin-bottom: 20px;
+  padding: 0;
+  text-align: center;
+  color: #FFFFFF;
+  background-color: #404040;
+}
+.plate-top-title{
+  font-size: 18px;
+  font-weight: normal;
+}
+.image-container{
+  text-align: center;
+}
+
+#table-plate {
+  position: relative;
+  width: 65%;
+}
+
+.scroll-container {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  top: 54px;
+  width: 100%;
+  overflow-y: scroll;
+}
+
+
+#result-table{
+  width: 100%;
+  text-align: center;
+  border-collapse: collapse;
+}
+
+#result-table tr{
+  height: 2em;
+}
+#result-table tr:nth-child(2n-1) {
+  background-color: #181818;
+}
+
+#result-table tr:nth-child(2n):hover {
+  background-color: #e9e9e9;
+}
+
+#result-table tr:nth-child(2n-1):hover {
+  background-color: #bbaad8;
+}
+
+#result-table tr.table-header:hover {
+  background-color: #c8b5e9;
+}
+.coords-col {
+  width: 12%;
+}
+
+.time-col {
+  width: 25%;
+}
+
+.left-aligned {
+  float: left;
+}
+
+.right-aligned {
+  float: right;
 }
