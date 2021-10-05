@@ -16,8 +16,12 @@
   <div class="container">
     <!--  Header   -->
     <div class="header">
-      <h2>Шапка сайта </h2>
-      <h3>Пурэвсурэн Билгуун, P3213, Вариант 1207</h3>
+      <span style="float:left; margin-right: 1em;"><img width="50px" src="img/guy.png" alt="Portrait"></span>
+      <span id="color-changer"> <button></button> </span>
+      <span>Пурэвсурэн Билгуун P3213</span>
+      <br>
+      <span>Вариант 1207</span>
+      <br>
     </div>
 
     <div class="main">
@@ -37,7 +41,7 @@
           <h2 class="plate-top-title">Table</h2>
         </div>
         <div class="scroll-container">
-          <table id = "result-table">
+          <table id="result-table">
             <tr class="table-header">
               <th class="coords-col">X</th>
               <th class="coords-col">Y</th>
@@ -51,16 +55,15 @@
 
       </div>
 
-      <div class="content-plate" id="values-late">
+          <!--  X Value   -->
+      <div class="content-plate" id="values-plate">
         <div class="plate-top">
           <h2 class="plate-top-title">Values</h2>
         </div>
 
         <form action="" id="input-form" method="post">
-          <!--  X Value   -->
           <div class="value-chooser">
-            <h4>Choose value of X: </h4>
-            <label class="x-label" for="x-value"> X: </label>
+            <label class="xlabel labels" for="x-value"> X: </label>
             <input class="x-textinput" type="text" id="x-value" name="Value" autocomplete="off" maxlength="10"
               placeholder="Number from -5 to 5">
           </div>
@@ -68,41 +71,84 @@
           <!--  Y Value -->
 
           <div class="value-chooser">
-            <h4>Choose value of Y: </h4>
-            <input class="y-checkbox" type="checkbox" name="yval" id="y-checkbox0" value="-5">
-            <label class="ybox-label" for="y-checkbox0"> -5 </label> <br>
-            <input class="y-checkbox" type="checkbox" name="yval" id="y-checkbox1" value="-4">
-            <label class="ybox-label" for="y-checkbox1"> -4 </label> <br>
-            <input class="y-checkbox" type="checkbox" name="yval" id="y-checkbox2" value="-3">
-            <label class="ybox-label" for="y-checkbox2"> -3 </label> <br>
-            <input class="y-checkbox" type="checkbox" name="yval" id="y-checkbox3" value="-2">
-            <label class="ybox-label" for="y-checkbox3"> -2 </label> <br>
-            <input class="y-checkbox" type="checkbox" name="yval" id="y-checkbox4" value="-1">
-            <label class="ybox-label" for="y-checkbox4"> -1 </label> <br>
-            <input class="y-checkbox" type="checkbox" name="yval" id="y-checkbox5" value="0">
-            <label class="ybox-label" for="y-checkbox5"> 0 </label> <br>
-            <input class="y-checkbox" type="checkbox" name="yval" id="y-checkbox6" value="1">
-            <label class="ybox-label" for="y-checkbox6"> 1 </label> <br>
-            <input class="y-checkbox" type="checkbox" name="yval" id="y-checkbox7" value="2">
-            <label class="ybox-label" for="y-checkbox7"> 2 </label> <br>
-            <input class="y-checkbox" type="checkbox" name="yval" id="y-checkbox8" value="3">
-            <label class="ybox-label" for="y-checkbox8">3 </label> <br>
+            <label style=" margin:1em 1em 0 1em; float:left;" class="y-label" for="y-checkbox">Y: </label>
+            <table>
+              <tr>
+                <td>
+                  <input class="y-checkbox" type="checkbox" name="yval" id="y-checkbox0" value="-5">
+                </td>
+                <td>
+                  <input class="y-checkbox" type="checkbox" name="yval" id="y-checkbox1" value="-4">
+                </td>
+                <td>
+                  <input class="y-checkbox" type="checkbox" name="yval" id="y-checkbox2" value="-3">
+                </td>
+                <td>
+                  <input class="y-checkbox" type="checkbox" name="yval" id="y-checkbox3" value="-2">
+                </td>
+                <td>
+                  <input class="y-checkbox" type="checkbox" name="yval" id="y-checkbox4" value="-1">
+                </td>
+                <td>
+                  <input class="y-checkbox" type="checkbox" name="yval" id="y-checkbox5" value="0">
+                </td>
+                <td>
+                  <input class="y-checkbox" type="checkbox" name="yval" id="y-checkbox6" value="1">
+                </td>
+                <td>
+                  <input class="y-checkbox" type="checkbox" name="yval" id="y-checkbox7" value="2">
+                </td>
+                <td>
+                  <input class="y-checkbox" type="checkbox" name="yval" id="y-checkbox8" value="3"> 
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label class="ybox-label" for="y-checkbox0"> 5 </label>
+                </td>
+                <td>
+                  <label class="ybox-label" for="y-checkbox1"> 4 </label>
+                </td>
+                <td>
+                  <label class="ybox-label" for="y-checkbox2"> 3 </label>
+                </td>
+                <td>
+                  <label class="ybox-label" for="y-checkbox3"> 2 </label>
+                </td>
+                <td>
+                  <label class="ybox-label" for="y-checkbox4"> 1 </label>
+                </td>
+                <td>
+                  <label class="ybox-label" for="y-checkbox5"> 0 </label>
+                </td>
+                <td>
+                  <label class="ybox-label" for="y-checkbox6"> 1 </label>
+                </td>
+                <td>
+                  <label class="ybox-label" for="y-checkbox7"> 2</label>
+                </td>
+                <td>
+                  <label class="ybox-label" for="y-checkbox8">3</label>
+                </td>
+              </tr>
+            </table>
+            
           </div>
 
           <!--  R Value   -->
 
           <div class="value-chooser">
-            <h4>Choose your value of R</h4>
+            <label for="r-checkbox">R: </label>
             <input class="r-checkbox" type="checkbox" name="rval" id="r-checkbox1" value="1">
-            <label class="rbox-label" for="r-checkbox1"> 1 </label> <br>
+            <label class="rbox-label" for="r-checkbox1"> 1 </label>
             <input class="r-checkbox" type="checkbox" name="rval" id="r-checkbox2" value="2">
-            <label class="rbox-label" for="r-checkbox2"> 2 </label> <br>
+            <label class="rbox-label" for="r-checkbox2"> 2 </label>
             <input class="r-checkbox" type="checkbox" name="rval" id="r-checkbox3" value="3">
-            <label class="rbox-label" for="r-checkbox3"> 3 </label> <br>
+            <label class="rbox-label" for="r-checkbox3"> 3 </label>
             <input class="r-checkbox" type="checkbox" name="rval" id="r-checkbox4" value="4">
-            <label class="rbox-label" for="r-checkbox4"> 4 </label> <br>
+            <label class="rbox-label" for="r-checkbox4"> 4 </label>
             <input class="r-checkbox" type="checkbox" name="rval" id="r-checkbox5" value="5">
-            <label class="rbox-label" for="r-checkbox5"> 5 </label> <br>
+            <label class="rbox-label" for="r-checkbox5"> 5 </label>
           </div>
 
           <div class="buttons">
