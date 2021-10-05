@@ -14,32 +14,32 @@ body{
 }
 
 .header {
-  padding: 1em 30px;
+  display: block;
+  padding: 2em;
   font-size: 20px;
   background-color: #181818;
   color: #FFFFFF;
+  overflow:hidden;
 }
 
-input:invalid{
-  border: 2px solid red;
-}
+
 .mission-image{
   border:2px solid #EEEEEE;
   border-radius: 20px;
-  width: 30%;
+  width: 90%;
 }
+
 .main{
   margin-top: 3em;
 }
 
 .value-chooser{
-  margin: 2%;
-  padding:2%;
-  font-size: 100%;
+  margin: 2% 0;
+  text-align: center;
+  font-size: 0.8em;
   background-color: #404040;
-  border: 2px solid #eeeeee;
+  border: 1px solid #eeeeee;
   border-radius: 1em;
-  float: left;
 }
 
 .text-error{
@@ -60,6 +60,14 @@ input:invalid{
 
 .buttons{
   margin-top: 3%;
+}
+.buttons::before{
+  content: "";
+  display:block;
+  height:2px;
+  width:60px;
+  margin: 0 auto 4%;
+  background-color: #404040;
 }
 
 .button{
@@ -95,10 +103,26 @@ input:invalid{
 .image-container{
   text-align: center;
 }
+.labels{
+  float:left;
+}
 
 #table-plate {
+  float:right;
   position: relative;
-  width: 65%;
+  min-width: 63%;
+  border: 2px solid #EEEEEE;
+}
+#graph-plate{
+  position: relative;
+  max-width: 16em;
+  float: left;
+  border: 2px solid #EEEEEE;
+}
+#values-plate{
+  border: 2px solid #EEEEEE;
+  position:inline;
+  max-width: 16em;
 }
 
 .scroll-container {
