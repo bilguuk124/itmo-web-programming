@@ -47,7 +47,7 @@ $(function() {
         event.preventDefault();
         if(!validateForm()) return;
         $.ajax({
-            URL: 'php/main.php',
+            URL: '../php/main.php',
             method: 'POST',
             data: $(this).serialize() + '&timezone=' + new Date().getTimezoneOffset,
             dataType: "json",
@@ -64,7 +64,7 @@ $(function() {
                     newRow += '<td>' + data.curtime + '</td>';
                     newRow += '<td>' + data.exectime + '</td>';
                     newRow += '<td>' + data.hitres + '</td>';
-                    $('#result-table').append(newRow)
+                    $('#result-table').append(newRow);
                 }
             }
         });

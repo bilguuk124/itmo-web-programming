@@ -26,18 +26,18 @@ function validateForm($xVal, $yVal, $rVal) {
 
 // Hit check functions
 function checkTriangle($xVal, $yVal, $rVal) {
-  return $xVal <= 0 && $yVal >= 0 &&
+  return $xVal >= 0 && $yVal >= 0 &&
     $yVal <= $xVal + $rVal;
 }
 
 function checkRectangle($xVal, $yVal, $rVal) {
-  return $xVal >= 0 && $yVal >= 0 &&
-    $xVal <= $rVal && $yVal <= $rVal/2;
+  return $xVal >= 0 && $yVal <= 0 &&
+    $xVal <= $rVal/2 && $yVal <= $rVal;
 }
 
 function checkCircle($xVal, $yVal, $rVal) {
-  return $xVal <=0 && $yVal <= 0 &&
-    sqrt($xVal*$xVal + $yVal*$yVal) <= $rVal;
+  return $xVal <=0 && $yVal >= 0 &&
+    sqrt($xVal*$xVal + $yVal*$yVal) <= $rVal/2;
 }
 
 function checkHit($xVal, $yVal, $rVal) {

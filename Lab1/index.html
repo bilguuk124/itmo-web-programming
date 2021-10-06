@@ -1,13 +1,11 @@
 <!doctype html>
-<html class="no-js" lang="">
+<html>
 
 <head>
   <meta charset="utf-8">
   <title>Лабораторная работа №1</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script src="js/main.js"></script>
-
   <link rel="stylesheet" href="css/main.css">
 </head>
 
@@ -17,7 +15,7 @@
     <!--  Header   -->
     <div class="header">
       <span style="float:left; margin-right: 1em;"><img width="50px" src="img/guy.png" alt="Portrait"></span>
-      <span id="color-changer"> <button></button> </span>
+      <span id="color-changer"> <button >Click Here</button> </span>
       <span>Пурэвсурэн Билгуун P3213</span>
       <br>
       <span>Вариант 1207</span>
@@ -61,9 +59,9 @@
           <h2 class="plate-top-title">Values</h2>
         </div>
 
-        <form action="" id="input-form" method="post">
+        <form action="" id="input-form" method="POST">
           <div class="value-chooser">
-            <label class="xlabel labels" for="x-value"> X: </label>
+            <label class="xlabel" for="x-value"> X: </label>
             <input class="x-textinput" type="text" id="x-value" name="Value" autocomplete="off" maxlength="10"
               placeholder="Number from -5 to 5">
           </div>
@@ -71,8 +69,8 @@
           <!--  Y Value -->
 
           <div class="value-chooser">
-            <label style=" margin:1em 1em 0 1em; float:left;" class="y-label" for="y-checkbox">Y: </label>
-            <table>
+            <label class="y-label" for="y-checkbox">Y: </label>
+            <table class="y-checkbox-table">
               <tr>
                 <td>
                   <input class="y-checkbox" type="checkbox" name="yval" id="y-checkbox0" value="-5">
@@ -104,19 +102,19 @@
               </tr>
               <tr>
                 <td>
-                  <label class="ybox-label" for="y-checkbox0"> 5 </label>
+                  <label class="ybox-label" for="y-checkbox0"> -5 </label>
                 </td>
                 <td>
-                  <label class="ybox-label" for="y-checkbox1"> 4 </label>
+                  <label class="ybox-label" for="y-checkbox1"> -4 </label>
                 </td>
                 <td>
-                  <label class="ybox-label" for="y-checkbox2"> 3 </label>
+                  <label class="ybox-label" for="y-checkbox2"> -3 </label>
                 </td>
                 <td>
-                  <label class="ybox-label" for="y-checkbox3"> 2 </label>
+                  <label class="ybox-label" for="y-checkbox3"> -2 </label>
                 </td>
                 <td>
-                  <label class="ybox-label" for="y-checkbox4"> 1 </label>
+                  <label class="ybox-label" for="y-checkbox4"> -1 </label>
                 </td>
                 <td>
                   <label class="ybox-label" for="y-checkbox5"> 0 </label>
@@ -150,20 +148,18 @@
             <input class="r-checkbox" type="checkbox" name="rval" id="r-checkbox5" value="5">
             <label class="rbox-label" for="r-checkbox5"> 5 </label>
           </div>
-
+          <!--Buttons-->
           <div class="buttons">
             <input class="button" type="submit" value="Submit">
             <input class="button" type="reset" Value="Reset">
           </div>
-
-
-
         </form>
       </div>
     </div>
   </div>
 
-
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="js/main.js"></script>
 </body>
 
 </html>
