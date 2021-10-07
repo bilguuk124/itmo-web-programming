@@ -1,3 +1,4 @@
+console.log("lets start");
 $(function() {
     function isNumeric(n){
         return !isNaN(parseFloat(n)) && isFinite(n);
@@ -10,7 +11,7 @@ $(function() {
         let xField = $('#x-value');
         let numX = xField.val().replace(',','.');
     
-        if (isNumeric(xField) && numX >= X_MIN && numX <= X_MAX){
+        if (isNumeric(numX) && numX >= X_MIN && numX <= X_MAX){
             xField.removeClass('text-error');
             return true;
         } else {
@@ -40,23 +41,28 @@ $(function() {
     }
 
     function validateForm(){
-        return validateR & validateX & validateY;
+        console.log("I am validating")
+        return validateR() & validateX() & validateY();
     }
 
     $('#input-form').on('submit', function(event){
         event.preventDefault();
+        let timeZoneOffset = new Date().getTimezoneOffset();
         if(!validateForm()) return;
         $.ajax({
-            URL: '../php/main.php',
-            method: 'POST',
-            data: $(this).serialize() + '&timezone=' + new Date().getTimezoneOffset,
+            url: 'main.php',
+            type: 'POST',
+            data: $(this).serialize() + '&timezone=' + timeZoneOffset,
             dataType: "json",
             beforeSend: function(){
                 $('.button').attr('disabled','disabled');
+                console.log(this.data);
             },
             success: function(data){
+                console.log("log");
                 $('.button').attr('disabled',false);
-                if (data.validate){
+                let newRow;
+                if (data.validate) {
                     newRow = '<tr>';
                     newRow += '<td>' + data.xval + '</td>';
                     newRow += '<td>' + data.yval + '</td>';
@@ -65,6 +71,7 @@ $(function() {
                     newRow += '<td>' + data.exectime + '</td>';
                     newRow += '<td>' + data.hitres + '</td>';
                     $('#result-table').append(newRow);
+                    console.log("It is php's fault")
                 }
             }
         });

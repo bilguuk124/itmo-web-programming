@@ -41,6 +41,7 @@ function checkCircle($xVal, $yVal, $rVal) {
 }
 
 function checkHit($xVal, $yVal, $rVal) {
+
   return checkTriangle($xVal, $yVal, $rVal) || checkRectangle($xVal, $yVal, $rVal) ||
     checkCircle($xVal, $yVal, $rVal);
 }

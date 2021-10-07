@@ -1,12 +1,12 @@
 <!doctype html>
-<html>
+<html lang="en">
 
 <head>
   <meta charset="utf-8">
   <title>Лабораторная работа №1</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="main.css">
 </head>
 
 <body>
@@ -14,11 +14,10 @@
   <div class="container">
     <!--  Header   -->
     <div class="header">
-      <span style="float:left; margin-right: 1em;"><img width="50px" src="img/guy.png" alt="Portrait"></span>
-      <span id="color-changer"> <button >Click Here</button> </span>
+      <span style="float:left; margin-right: 1em;"><img width="50px" src="guy.png" alt="Portrait"></span>
       <span>Пурэвсурэн Билгуун P3213</span>
       <br>
-      <span>Вариант 1207</span>
+      <span>Вариант 13207</span>
       <br>
     </div>
 
@@ -29,7 +28,7 @@
           <h2 class="plate-top-title">Graph</h2>
         </div>
         <div class="image-container">
-          <img class="mission-image" src="img/Mission.png" alt="Изображение задании">
+          <img class="mission-image" src="mission.png" alt="Изображение задании">
         </div>
       </div>
 
@@ -50,26 +49,25 @@
             </tr>
           </table>
         </div>
-
       </div>
 
-          <!--  X Value   -->
+      <!--  Values   -->
       <div class="content-plate" id="values-plate">
         <div class="plate-top">
           <h2 class="plate-top-title">Values</h2>
         </div>
 
+        <!--X Value-->
         <form action="" id="input-form" method="POST">
           <div class="value-chooser">
             <label class="xlabel" for="x-value"> X: </label>
-            <input class="x-textinput" type="text" id="x-value" name="Value" autocomplete="off" maxlength="10"
+            <input class="x-textinput" type="text" id="x-value" name="xval" autocomplete="off" maxlength="10"
               placeholder="Number from -5 to 5">
           </div>
 
           <!--  Y Value -->
-
           <div class="value-chooser">
-            <label class="y-label" for="y-checkbox">Y: </label>
+            <label class="y-label">Y: </label>
             <table class="y-checkbox-table">
               <tr>
                 <td>
@@ -134,9 +132,8 @@
           </div>
 
           <!--  R Value   -->
-
           <div class="value-chooser">
-            <label for="r-checkbox">R: </label>
+            <label>R: </label>
             <input class="r-checkbox" type="checkbox" name="rval" id="r-checkbox1" value="1">
             <label class="rbox-label" for="r-checkbox1"> 1 </label>
             <input class="r-checkbox" type="checkbox" name="rval" id="r-checkbox2" value="2">
@@ -148,6 +145,7 @@
             <input class="r-checkbox" type="checkbox" name="rval" id="r-checkbox5" value="5">
             <label class="rbox-label" for="r-checkbox5"> 5 </label>
           </div>
+          
           <!--Buttons-->
           <div class="buttons">
             <input class="button" type="submit" value="Submit">
@@ -158,8 +156,10 @@
     </div>
   </div>
 
-  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-  <script src="js/main.js"></script>
+  <script src="jquery-3.5.1.min.js"></script>
+  <script type="text/javascript" src="main.js"></script>
+
+
 </body>
 
 </html>
