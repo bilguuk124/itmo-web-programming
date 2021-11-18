@@ -1,4 +1,4 @@
-console.log("lets start");
+
 $(function() {
     function isNumeric(n){
         return !isNaN(parseFloat(n)) && isFinite(n);
@@ -7,10 +7,10 @@ $(function() {
     function validateX(){
         const X_MAX = 5;
         const X_MIN = -5;
-    
+
         let xField = $('#x-value');
         let numX = xField.val().replace(',','.');
-    
+
         if (isNumeric(numX) && numX >= X_MIN && numX <= X_MAX){
             xField.removeClass('text-error');
             return true;
@@ -19,7 +19,7 @@ $(function() {
             return false;
         }
     }
-    
+
     function validateY(){
         if ($('.y-checkbox').is(':checked')){
             $('ybox-label').removeClass('box-error');
@@ -59,8 +59,8 @@ $(function() {
                 console.log(this.data);
             },
             success: function(data){
-                console.log("log");
                 $('.button').attr('disabled',false);
+
                 let newRow;
                 if (data.validate) {
                     newRow = '<tr>';
@@ -71,10 +71,16 @@ $(function() {
                     newRow += '<td>' + data.exectime + '</td>';
                     newRow += '<td>' + data.hitres + '</td>';
                     $('#result-table').append(newRow);
-                    console.log("It is php's fault")
+                    let key = localStorage.length+1;
+                    localStorage.setItem(key.toString(),newRow)
                 }
             }
         });
     });
 });
+
+
+for (let i = 1; i <= localStorage.length; i++){
+  $('#result-table').append(localStorage.getItem(i.toString()));
+}
 
