@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Created by IntelliJ IDEA.
+  User: bilguuk124
+  Date: 2022.02.05
+  Time: 18:13
+-->
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:a="http://xmlns.jcp.org/jsf/passthrough"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+
+<h:head>
+    <h:outputStylesheet library="css" name="style.css"/>
+    <link rel="icon" href="#{resource['img/favicon-32.ico']}"/>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&amp;display=swap" rel="stylesheet"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <ui:insert name="head">
+        <title>Лабораторная работа #3</title>
+    </ui:insert>
+</h:head>
+
+<h:body>
+    <header class="main-header topper clearfix">
+        <h:link styleClass="main-header__back-link" outcome="goToIndex">
+            <h:graphicImage value="resources/img/itmo-logo.png" height="40"/>
+        </h:link>
+        <span class="main-header__info">
+            Лабораторная работа #3 <br/>
+            #521901
+        </span>
+        <span class="main-header__authors">
+            Пурэвсурэн Билгуун P3213
+        </span>
+    </header>
+
+    <ui:insert name="main">
+        Основное содержимое страницы
+    </ui:insert>
+
+</h:body>
+
+</html>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+<ui:composition template="WEB-INF/templates/master.xhtml">
+    <ui:define name="head">
+        <title>Тестовая страница</title>
+        <h:outputStylesheet library="css" name="main.css"/>
+    </ui:define>
+
+    <ui:define name="main">
+        <main class="main-container">
+            <h:form styleClass="input-form">
+                <p:growl id="growl" showDetail="true"/>
+                <h:outputLabel styleClass="input-form__label input-form__label_x" for="xSlider" value="X"/>
+                <h:panelGrid columns="1">
+                    <h:inputText styleClass="test-input-x" id="xSlider" style="font-size: 20px; width: 100px" value="#{sliderView.xValue}"/>
+                    <h:commandButton styleClass="test-button" value="test"/>
+                </h:panelGrid>
+
+                <h:outputLabel styleClass="input-form__label input-form__label_y" for="y-text" value="Y"/>
+                <h:panelGrid columns="1">
+                    <h:inputText  styleClass="test-input-y" id="y-text" style="font-size: 20px; width: 100px" value="#{sliderView.yValue}"/>
+                </h:panelGrid>
+
+                <h:outputLabel styleClass="input-form__label input-form__label_r" for="rSlider" value="R"/>
+                <h:panelGrid columns="1">
+                    <h:inputText styleClass="test-input-r" id="rSlider" value="#{sliderView.rValue}" style="width: 100px; font-size: 20px;"  />
+                    <p:slider style="width: 100px" for="rSlider" minValue="1" maxValue="4" step="0.2" displayTemplate="%{value}"/>
+                </h:panelGrid>
+                <br/>
+                <br/>
+                <br/>
+
+
+                <div class="content-container result-graph_container">
+                    <object class="result-graph" type="image/svg+xml" data="#{resource['img/result-graph.svg']}">
+                        <img src="#{resource['img/result-graph.png']}" width="220" height="220" alt="График"/>
+                    </object>
+                    <canvas class="graph-canvas graph-canvas_points" width="220" height="220">Предыдущие проверки</canvas>
+                    <canvas id="graph_current" class="graph-canvas graph-canvas_current" width="220" height="220">Интерактивная область графика</canvas>
+                </div>
+
+                <h:outputScript library="js" name="test.js" />
+            </h:form>
+        </main>
+    </ui:define>
+</ui:composition>
+
+</html>
