@@ -12,6 +12,7 @@
     <ui:define name="head">
         <h:outputStylesheet  library="css" name="main.css"/>
         <title > Лабораторная работа #3 - Основная страница </title>
+
     </ui:define>
 
     <ui:define name="main">
@@ -26,8 +27,8 @@
                     </span>
                     </h2>
                     <div class="content-container result-graph_container">
-                        <object class="result-graph" type="image/svg+xml" data="#{resource['img/result-graph.svg']}">
-                            <img src="#{resource['img/result-graph.png']}" width="220" height="220" alt="График"/>
+                        <object class="result-graph" type="image/svg+xml" data="resources/img/result-graph.svg">
+                            <img src="resources/img/result-graph.png" width="220" height="220" alt="График"/>
                         </object>
                         <canvas class="graph-canvas graph-canvas_points" width="220" height="220">Предыдущие проверки</canvas>
                         <canvas id="graph_current" class="graph-canvas graph-canvas_current" width="220" height="220">Интерактивная область графика</canvas>

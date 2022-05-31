@@ -16,7 +16,7 @@ public class Entry implements Serializable {
 
     private Double xValue;
     private Double yValue;
-    private Double rValue;
+    private Double rValue = 1.0;
     private String hitResult;
 
     public Entry(){

@@ -9,12 +9,13 @@
 
 <ui:composition template="WEB-INF/templates/master.xhtml">
     <ui:define name="head">
-        <h:outputStylesheet library="css" name="index.css"/>
+        <h:outputStylesheet name="css/index.css"/>
         <title>Лабораторная работа #3 - Стартовая страница</title>
         <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     </ui:define>
 
     <ui:define name="main">
+
         <main class="main-container">
             <h1 class="visually-hidden">Лабораторная работа #3 - Стартовая страница</h1>
             <section class="main-container__item main-container__item_start">
@@ -30,6 +31,7 @@
                         На основную страницу
                     </h:link>
                 </div>
+
                 <br/>
                 <div class="index-menu">
                     <h:link styleClass="index-menu__link index-menu__link_to-test" outcome="goToTest">
@@ -37,8 +39,9 @@
                     </h:link>
                 </div>
             </section>
+            <script type="text/javascript" src="resources/js/index.js" ></script>
         </main>
-        <h:outputScript library="js" name="index.js"/>
+        <h:outputScript name="js/index.js"/>
     </ui:define>
 </ui:composition>
 

@@ -26,6 +26,7 @@
         <navigation-case>
             <from-outcome>redirect</from-outcome>
             <to-view-id>/main.xhtml</to-view-id>
+
             <redirect/>
         </navigation-case>
     </navigation-rule>

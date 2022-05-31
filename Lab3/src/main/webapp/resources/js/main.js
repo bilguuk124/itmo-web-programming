@@ -185,7 +185,7 @@ $(function(){
         redrawCurrentFromInput();
     });
 
-    $('input-form__control-buttons__button_submit').on('click',function(event){
+    $('.input-form__control-buttons__button_submit').on('click',function(event){
         if(!validateForm()){
             event.preventDefault();
         }
