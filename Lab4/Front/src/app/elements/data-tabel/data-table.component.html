@@ -1,0 +1,55 @@
+<div class="table">
+  <!-- table -->
+  <table style="border: 1px solid white">
+  <caption>Результат выполнения</caption>
+
+    <tr>
+      <th>X</th>
+      <th>Y</th>
+      <th>R</th>
+      <th>Попал?</th>
+    </tr>
+    <tr >
+      <th>1</th>
+      <th>2</th>
+      <th>3</th>
+      <th>True</th>
+    </tr>
+    <tr >
+      <th>1</th>
+      <th>2</th>
+      <th>3</th>
+      <th>True</th>
+    </tr>
+    <tr >
+      <th>1</th>
+      <th>2</th>
+      <th>3</th>
+      <th>True</th>
+    </tr>
+    <tr >
+      <th>1</th>
+      <th>2</th>
+      <th>3</th>
+      <th>True</th>
+    </tr>
+    <tr >
+      <th>1</th>
+      <th>2</th>
+      <th>3</th>
+      <th>True</th>
+    </tr>
+    <tr >
+      <th>1</th>
+      <th>2</th>
+      <th>3</th>
+      <th>True</th>
+    </tr>
+    <tr *ngFor="let point of data.reverse()">
+      <th>{{point.x}}</th>
+      <th>{{point.y}}</th>
+      <th>{{point.r}}</th>
+      <th>{{point.hit}}</th>
+    </tr>
+  </table>
+</div>

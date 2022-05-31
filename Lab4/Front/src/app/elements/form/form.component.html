@@ -1,0 +1,37 @@
+<div class="form-block" id="block-form">
+  <form [formGroup]="point">
+    <br>
+    <div class="coordinate-x">
+      <label>Координата X:</label>
+      <br>
+      <p-radioButton class="radioButton" formControlName="x" value="-3"  label="-3"></p-radioButton>
+      <p-radioButton class="radioButton" formControlName="x" value="-2"  label="-2"></p-radioButton>
+      <p-radioButton class="radioButton" formControlName="x" value="-1"  label="-1"></p-radioButton>
+      <p-radioButton class="radioButton" formControlName="x"  value="0"   label="0"></p-radioButton>
+      <p-radioButton class="radioButton" formControlName="x"  value="1"   label="1"></p-radioButton>
+      <p-radioButton class="radioButton" formControlName="x"  value="2"   label="2"></p-radioButton>
+      <p-radioButton class="radioButton" formControlName="x"  value="3"   label="3"></p-radioButton>
+      <p-radioButton class="radioButton" formControlName="x"  value="4"   label="4"></p-radioButton>
+      <p-radioButton class="radioButton" formControlName="x"  value="5"   label="5"></p-radioButton>
+    </div>
+    <br>
+    <div class="coordinate-y">
+      <label>Координата Y:
+        <input formControlName="y"  placeholder="от -5 до 5" id="y-input" type="text" pInputText>
+      </label>
+    </div>
+    <br>
+    <div class="coordinate-r">
+      <label>Радиус R: </label>
+      <br>
+      <p-radioButton class="radioButton"  (onClick)="rChanger()" formControlName="r" value="1"  label="1"></p-radioButton>
+      <p-radioButton class="radioButton"  (onClick)="rChanger()" formControlName="r" value="2"  label="2"></p-radioButton>
+      <p-radioButton class="radioButton"  (onClick)="rChanger()" formControlName="r" value="3"  label="3"></p-radioButton>
+      <p-radioButton class="radioButton"  (onClick)="rChanger()" formControlName="r" value="4"  label="4"></p-radioButton>
+      <p-radioButton class="radioButton"  (onClick)="rChanger()" formControlName="r" value="5"  label="5"></p-radioButton>
+    </div>
+    <br>
+    <p-button type="submit" (click)="sendPoint()" id="ssss" label="Отправить"></p-button>
+  </form>
+</div>
+

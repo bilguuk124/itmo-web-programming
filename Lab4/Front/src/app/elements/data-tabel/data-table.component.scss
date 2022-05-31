@@ -1,0 +1,39 @@
+.table {
+  margin-top: 20px;
+  background-color: rgba(46, 46, 46, 0.7);
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  margin-left: 7.5%;
+  margin-right: 7.5%;
+
+  table {
+    caption{
+      margin: 1em;
+    }
+    width: 100%;
+    color: white;
+    tr{
+      padding: 1em;
+    }
+  }
+}
+@media screen and (max-width: 1059px) {
+  .table{
+    width: 80%;
+    margin: auto;
+    margin-top: 15px;
+  }
+}
+
+@media screen and (max-width: 649px) {
+  .table{
+    width: 90%;
+    margin: auto;
+    margin-top: 15px;
+    caption{
+      margin: 0.5em;
+    }
+  }
+}
+

@@ -1,0 +1,32 @@
+
+
+.radioButton {
+  margin-right: 2%;
+  border-radius: 20% 20% 20% 20%;
+  border-color: cornflowerblue;
+}
+
+.radioButton:hover {
+  border-style: solid;
+  border-color: cornflowerblue;
+  border-radius: 20% 20% 20% 20%;
+  transition: 60ms;
+  background-color: cornflowerblue;
+}
+
+p-button {
+  margin-right: 20px;
+}
+.table {
+  margin-top: 15px;
+  background-color: rgba(69, 69, 69, 0.6);
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+
+  table {
+    width: 100%;
+    border-radius: 30px;
+    color: white;
+  }
+}

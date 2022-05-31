@@ -1,0 +1,28 @@
+<div class="main-container">
+  <app-head-comp></app-head-comp>
+</div>
+<p-messages [(value)]="message"></p-messages>
+<div class="content">
+  <div class="block">
+
+    <div class="container" xmlns="http://www.w3.org/1999/html">
+      <h1>Войти в учетную запись</h1>
+      <form [formGroup]="user">
+        <div class="inputs">
+          <input type="text" formControlName="login" pInputText placeholder="Логин">
+        </div>
+        <div class="inputs">
+          <input type="password" formControlName="password" pPassword placeholder="Пароль">
+        </div>
+      </form>
+      <div class="buttons inputs signIn">
+        <button pButton class="voitiButton" label="Войти" (click)="sendUser()"><i  class="pi pi-sign-in"></i></button>
+      </div>
+      <div class="buttons inputs">
+        <button pButton class="voitiButton" label="Создать" (click)="createUser()"><i class="pi pi-user-plus"></i></button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
